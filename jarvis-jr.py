@@ -14,7 +14,7 @@ say("Welcome, Human")
 class MyFrame(wx.Frame):
     def __init__(self):
         wx.Frame.__init__(self, None,
-            pos=wx.DefaultPosition, size=wx.Size(450, 120),
+            pos=wx.DefaultPosition, size=wx.Size(500, 120),
             style=wx.MINIMIZE_BOX | wx.SYSTEM_MENU | wx.CAPTION |
              wx.CLOSE_BOX | wx.CLIP_CHILDREN,
             title="PyDa")
@@ -23,7 +23,7 @@ class MyFrame(wx.Frame):
         lbl = wx.StaticText(panel,
         label="Hello I am Jarvis Jr. a Python Digital Assistant. How can I help you?")
         my_sizer.Add(lbl, 0, wx.ALL, 5)
-        self.txt = wx.TextCtrl(panel, style=wx.TE_PROCESS_ENTER,size=(400,30))
+        self.txt = wx.TextCtrl(panel, style=wx.TE_PROCESS_ENTER,size=(450,45))
         self.txt.SetFocus()
         self.txt.Bind(wx.EVT_TEXT_ENTER, self.OnEnter)
         my_sizer.Add(self.txt, 0, wx.ALL, 5)
