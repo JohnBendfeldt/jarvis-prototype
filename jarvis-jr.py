@@ -17,7 +17,7 @@ class MyFrame(wx.Frame):
             pos=wx.DefaultPosition, size=wx.Size(500, 120),
             style=wx.MINIMIZE_BOX | wx.SYSTEM_MENU | wx.CAPTION |
             wx.CLOSE_BOX | wx.CLIP_CHILDREN,
-            title="PyDa")
+            title="Jarvis Jr.")
         panel = wx.Panel(self)
         my_sizer = wx.BoxSizer(wx.VERTICAL)
         lbl = wx.StaticText(panel,
@@ -29,7 +29,7 @@ class MyFrame(wx.Frame):
         my_sizer.Add(self.txt, 0, wx.ALL, 5)
         panel.SetSizer(my_sizer)
         self.Show()
-        say("Welcome, how may I help you?")
+        say("Welcome my name is Jarvis how may I help you?")
     def OnEnter(self, event):
         input = self.txt.GetValue()
         input = input.lower()
@@ -55,7 +55,7 @@ class MyFrame(wx.Frame):
             except:
                 #wikipedia
                 print(wikipedia.summary(input))
-                say("Sorry for the wait, sir")    
+                say("Sorry for the wait sir")    
 
 if __name__ == "__main__":
     app = wx.App(True)
